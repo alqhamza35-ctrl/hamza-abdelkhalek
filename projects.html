@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع | Hamza Abdelkhalek</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========================================
+         شريط التنقل (Navbar)
+         ======================================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                Hamza Abdelkhalek
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                <li><a href="about.html" data-i18n="about">عني</a></li>
+                <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                <li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li>
+                <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+            </ul>
+
+            <div class="header-controls">
+                <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         قسم المشاريع (Projects Section)
+         ======================================== -->
+    <section class="projects" style="padding-top: 120px;">
+        <div class="container">
+            <!-- عنوان القسم -->
+            <div class="section-header">
+                <h2 data-i18n="projects-title">مشاريعي</h2>
+                <p data-i18n="projects-subtitle">أحدث الأعمال التي قمت بتنفيذها</p>
+            </div>
+
+            <!-- شبكة المشاريع -->
+            <div class="projects-grid">
+
+                <!-- المشروع الأول: تعلم صنع مواقع -->
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3>تعلم صنع مواقع</h3>
+                        <p>تعلم إنشاء مواقع الويب مع OsamaZero</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alqhamza55gg-spec.github.io/-Learning-to-make-website-with-OsamaZero/" target="_blank" class="live-link">معاينة مباشرة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع الثاني: Aureum -->
+                <div class="project-card">
+                    <div class="project-image">💎</div>
+                    <div class="project-content">
+                        <h3>Aureum</h3>
+                        <p>موقع Aureum - تصميم أنيق وعصري</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alqhamoz35-droid.github.io/Aureum/" target="_blank" class="live-link">معاينة مباشرة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع الثالث: اختبار رياضيات -->
+                <div class="project-card">
+                    <div class="project-image">🧮</div>
+                    <div class="project-content">
+                        <h3>اختبار رياضيات</h3>
+                        <p>تطبيق اختبار في مادة الرياضيات</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alqhamza35-ctrl.github.io/test-math-09/" target="_blank" class="live-link">معاينة مباشرة</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

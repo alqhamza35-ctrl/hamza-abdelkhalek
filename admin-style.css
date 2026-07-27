@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #D4AF37;
+    --primary-dark: #B8960C;
+    --bg-color: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-color: #333333;
+    --text-light: #666666;
+    --card-bg: #ffffff;
+    --border: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ffffff, #f8f9fa, rgba(212, 175, 55, 0.1), #ffffff);
+    background-size: 400% 400%;
+    animation: bgShift 15s ease infinite;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-box {
+    background: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark), var(--primary));
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.login-box h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.btn-login:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+.error-msg {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+    font-size: 0.95rem;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #ffffff 0%, rgba(212, 175, 55, 0.05) 100%);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.dashboard-header h1 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.dashboard-header div {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-logout {
+    padding: 10px 22px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-logout:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-logout:active {
+    transform: scale(0.98);
+}
+
+.dashboard-content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.send-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.send-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark), var(--primary));
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+}
+
+.send-section h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.btn-send {
+    padding: 14px 35px;
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-send::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.btn-send:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-send:hover::before {
+    left: 100%;
+}
+
+.btn-send:active {
+    transform: scale(0.98);
+}
+
+.messages-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.message-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.message-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.message-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.15);
+    transform: translateY(-2px);
+}
+
+.message-card:hover::before {
+    opacity: 1;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.message-name {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.message-date {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.message-email {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.message-text {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.message-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-delete {
+    padding: 10px 18px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-delete:active {
+    transform: scale(0.98);
+}
+
+.no-messages {
+    text-align: center;
+    color: var(--text-light);
+    padding: 60px;
+    font-size: 1.2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px dashed var(--border);
+}
+
+.section-heading {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+    font-weight: 600;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.portfolio-tags span {
+    background: linear-gradient(130deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.3));
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <div>
+            <button class="btn-logout" id="clear-all">Clear All</button>
+            <button class="btn-logout" id="logout-btn">Logout</button>
+        </div>
+    </div>
+    <div class="dashboard-content">
+        <div class="send-section">
+            <h2>Add Project</h2>
+            <form id="project-form">
+                <div class="form-group">
+                    <label>Project Title</label>
+                    <input type="text" id="project-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="project-desc" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Project Link (URL)</label>
+                    <input type="url" id="project-link" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="url" id="project-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label>Tags (comma separated)</label>
+                    <input type="text" id="project-tags" placeholder="HTML, CSS, JavaScript">
+                </div>
+                <button type="submit" class="btn-send">Add Project</button>
+            </form>
+        </div>
+
+        <div class="send-section">
+            <h2>Add Certificate</h2>
+            <form id="certificate-form">
+                <div class="form-group">
+                    <label>Certificate Title</label>
+                    <input type="text" id="cert-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Issuer / Organization</label>
+                    <input type="text" id="cert-issuer" required>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="text" id="cert-date" placeholder="2024">
+                </div>
+                <div class="form-group">
+                    <label>Certificate Link (URL)</label>
+                    <input type="url" id="cert-link" placeholder="https://example.com/certificate">
+                </div>
+                <div class="form-group">
+                    <label>Image URL (optional)</label>
+                    <input type="url" id="cert-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn-send">Add Certificate</button>
+            </form>
+        </div>
+
+        <h2 class="section-heading">Projects</h2>
+        <div class="messages-grid" id="projects-grid">
+            <p class="no-messages">No projects yet.</p>
+        </div>
+
+        <h2 class="section-heading">Certificates</h2>
+        <div class="messages-grid" id="certificates-grid">
+            <p class="no-messages">No certificates yet.</p>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
