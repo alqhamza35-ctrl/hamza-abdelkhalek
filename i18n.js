@@ -67,6 +67,7 @@ const translations = {
     "phone-info": { "ar": "01022317002", "en": "01022317002" },
     "location-title": { "ar": "الموقع", "en": "Location" },
     "location-info": { "ar": "مصر", "en": "Egypt" },
+    "github-link": { "ar": "🐙 GitHub", "en": "🐙 GitHub" },
 
     // Controls
     "lang-button": { "ar": "EN", "en": "AR" }

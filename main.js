@@ -1,9 +1,4 @@
-/* ========================================
-   main.js - الوظائف الرئيسية للموقع
-   يحتوي على: تبديل الوضع الداكن، القائمة المتجاوبة، التأثيرات
-   ======================================== */
-
-// --- تبديل الوضع الداكن/الفاتح (Dark/Light Theme Toggle) ---
+// --- Theme Toggle ---
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -25,7 +20,7 @@ function updateThemeIcon(theme) {
     }
 }
 
-// --- قائمة الجوال (Mobile Menu) ---
+// --- Mobile Menu ---
 function initMobileMenu() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
@@ -43,7 +38,7 @@ function initMobileMenu() {
     }
 }
 
-// --- تأثير الظهور عند التمرير (Scroll Animation) ---
+// --- Scroll Animation ---
 function initScrollAnimation() {
     const observerOptions = {
         threshold: 0.1,
@@ -67,7 +62,7 @@ function initScrollAnimation() {
     });
 }
 
-// --- تأثير شريط المهارات (Skills Bar Animation) ---
+// --- Skills Bar Animation ---
 function initSkillsAnimation() {
     const skillBars = document.querySelectorAll('.skill-bar .progress');
 
@@ -86,7 +81,7 @@ function initSkillsAnimation() {
     });
 }
 
-// --- تأثير الناف بار عند التمرير (Navbar Scroll Effect) ---
+// --- Navbar Scroll Effect ---
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
 
@@ -99,49 +94,14 @@ function initNavbarScroll() {
     });
 }
 
-// --- تأثير الجسيمات الذهبية (Gold Particles) ---
-function initGoldParticles() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    for (let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'gold-particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: ${Math.random() * 6 + 2}px;
-            height: ${Math.random() * 6 + 2}px;
-            background: rgba(212, 175, 55, ${Math.random() * 0.5 + 0.2});
-            border-radius: 50%;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            pointer-events: none;
-            animation: float ${Math.random() * 6 + 4}s ease-in-out infinite;
-            animation-delay: ${Math.random() * 5}s;
-        `;
-        hero.appendChild(particle);
-    }
-
-    // إضافة CSS للجسيمات
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0.3;
-            }
-            50% {
-                transform: translateY(-30px) translateX(20px);
-                opacity: 0.8;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// --- تأثير التوهج عند النقر (Click Glow Effect) ---
+// --- Click Glow Effect (throttled) ---
 function initClickGlow() {
+    let lastGlow = 0;
     document.addEventListener('click', (e) => {
+        const now = Date.now();
+        if (now - lastGlow < 100) return;
+        lastGlow = now;
+
         const glow = document.createElement('div');
         glow.style.cssText = `
             position: fixed;
@@ -156,72 +116,25 @@ function initClickGlow() {
             z-index: 9999;
         `;
         document.body.appendChild(glow);
-
         setTimeout(() => glow.remove(), 600);
     });
 
-    // إضافة CSS للتأثير
     const style = document.createElement('style');
     style.textContent = `
         @keyframes clickGlow {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(5);
-                opacity: 0;
-            }
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(5); opacity: 0; }
         }
     `;
     document.head.appendChild(style);
 }
 
-// --- تأثير النص الذهبي المتدرج (Gold Text Gradient) ---
-function initGoldText() {
-    const logo = document.querySelector('.logo');
-    if (logo) {
-        logo.style.background = 'linear-gradient(135deg, #D4AF37, #FFD700, #D4AF37)';
-        logo.style.webkitBackgroundClip = 'text';
-        logo.style.webkitTextFillColor = 'transparent';
-        logo.style.backgroundClip = 'text';
-    }
-}
-
-// --- نموذج الاتصال (Contact Form) ---
-function initContactForm() {
-    const form = document.querySelector('.contact-form');
-
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-
-            if (!name || !email || !message) {
-                alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please fill in all required fields');
-                return;
-            }
-
-            alert(currentLang === 'ar' ? 'تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.' : 'Your message has been sent successfully! I will contact you soon.');
-            form.reset();
-        });
-    }
-}
-
-// --- تهيئة جميع الوظائف عند تحميل الصفحة ---
+// --- Init ---
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initMobileMenu();
     initScrollAnimation();
     initSkillsAnimation();
     initNavbarScroll();
-    initContactForm();
-    initGoldParticles();
     initClickGlow();
-    initGoldText();
 });

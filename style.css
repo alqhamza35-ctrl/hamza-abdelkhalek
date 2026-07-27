@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
     --primary: #D4AF37;
     --primary-dark: #B8960C;
@@ -566,7 +568,7 @@ section {
 }
 
 .info-item:hover {
-    padding-left: 10px;
+    padding-inline-start: 10px;
 }
 
 .info-item .icon {
@@ -1074,8 +1076,6 @@ section {
 }
 
 /* ========== FONTS ========== */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
 [dir="rtl"] body {
     font-family: 'Cairo', sans-serif;
 }

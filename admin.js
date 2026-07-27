@@ -35,94 +35,6 @@ function handleLogin() {
     });
 }
 
-function loadMessages() {
-    const grid = document.getElementById('messages-grid');
-    if (!grid) return;
-
-    const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
-
-    if (messages.length === 0) {
-        grid.innerHTML = '<p class="no-messages">No messages yet.</p>';
-        return;
-    }
-
-    grid.innerHTML = messages.map((msg, index) => `
-        <div class="message-card">
-            <div class="message-header">
-                <span class="message-name">${msg.name}</span>
-                <span class="message-date">${msg.date}</span>
-            </div>
-            <p class="message-email">${msg.email}</p>
-            <p class="message-text">${msg.message}</p>
-            <div class="message-actions">
-                <button class="btn-delete" onclick="deleteMessage(${index})">Delete</button>
-            </div>
-        </div>
-    `).join('');
-}
-
-function deleteMessage(index) {
-    const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
-    messages.splice(index, 1);
-    localStorage.setItem('contactMessages', JSON.stringify(messages));
-    loadMessages();
-}
-
-function handleSendForm() {
-    const form = document.getElementById('send-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const title = document.getElementById('send-title').value;
-        const message = document.getElementById('send-message').value;
-
-        const sent = JSON.parse(localStorage.getItem('sentMessages') || '[]');
-        sent.push({
-            title: title,
-            message: message,
-            date: new Date().toLocaleString()
-        });
-        localStorage.setItem('sentMessages', JSON.stringify(sent));
-
-        form.reset();
-        loadSentMessages();
-        alert('Message sent successfully!');
-    });
-}
-
-function loadSentMessages() {
-    const grid = document.getElementById('sent-grid');
-    if (!grid) return;
-
-    const sent = JSON.parse(localStorage.getItem('sentMessages') || '[]');
-
-    if (sent.length === 0) {
-        grid.innerHTML = '<p class="no-messages">No sent messages yet.</p>';
-        return;
-    }
-
-    grid.innerHTML = sent.map((msg, index) => `
-        <div class="message-card">
-            <div class="message-header">
-                <span class="message-name">${msg.title}</span>
-                <span class="message-date">${msg.date}</span>
-            </div>
-            <p class="message-text">${msg.message}</p>
-            <div class="message-actions">
-                <button class="btn-delete" onclick="deleteSentMessage(${index})">Delete</button>
-            </div>
-        </div>
-    `).join('');
-}
-
-function deleteSentMessage(index) {
-    const sent = JSON.parse(localStorage.getItem('sentMessages') || '[]');
-    sent.splice(index, 1);
-    localStorage.setItem('sentMessages', JSON.stringify(sent));
-    loadSentMessages();
-}
-
 function handleProjectForm() {
     const form = document.getElementById('project-form');
     if (!form) return;
@@ -171,7 +83,7 @@ function loadProjects() {
             </div>
             <p class="message-text">${proj.description}</p>
             ${proj.image ? `<img src="${proj.image}" style="max-width:200px; border-radius:8px; margin-top:10px;">` : ''}
-            ${proj.link ? `<p style="margin-top:10px;"><a href="${proj.link}" target="_blank" style="color:#d4a843;">${proj.link}</a></p>` : ''}
+            ${proj.link ? `<p style="margin-top:10px;"><a href="${proj.link}" target="_blank" style="color:#D4AF37;">${proj.link}</a></p>` : ''}
             <div class="portfolio-tags" style="margin-top:10px;">
                 ${proj.tags.map(tag => `<span>${tag}</span>`).join('')}
             </div>
@@ -237,7 +149,7 @@ function loadCertificates() {
             </div>
             <p class="message-email">${cert.issuer}</p>
             ${cert.image ? `<img src="${cert.image}" style="max-width:200px; border-radius:8px; margin-top:10px;">` : ''}
-            ${cert.link ? `<p style="margin-top:10px;"><a href="${cert.link}" target="_blank" style="color:#02b788;">${cert.link}</a></p>` : ''}
+            ${cert.link ? `<p style="margin-top:10px;"><a href="${cert.link}" target="_blank" style="color:#D4AF37;">${cert.link}</a></p>` : ''}
             <div class="message-actions">
                 <button class="btn-delete" onclick="deleteCertificate(${index})">Delete</button>
             </div>
@@ -258,12 +170,8 @@ function handleClearAll() {
 
     btn.addEventListener('click', function() {
         if (confirm('Are you sure you want to delete all data?')) {
-            localStorage.removeItem('contactMessages');
-            localStorage.removeItem('sentMessages');
             localStorage.removeItem('projects');
             localStorage.removeItem('certificates');
-            loadMessages();
-            loadSentMessages();
             loadProjects();
             loadCertificates();
         }
@@ -282,11 +190,8 @@ function handleLogout() {
 
 checkAuth();
 handleLogin();
-loadMessages();
-loadSentMessages();
 loadProjects();
 loadCertificates();
-handleSendForm();
 handleProjectForm();
 handleCertificateForm();
 handleClearAll();
