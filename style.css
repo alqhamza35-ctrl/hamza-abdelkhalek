@@ -518,7 +518,6 @@ section {
     100% { left: 100%; }
 }
 
-.login-box,
 .about-info-card,
 .project-card,
 .certificate-card,
@@ -527,6 +526,8 @@ section {
 .project-image {
     background: var(--card-bg);
 }
+
+.about-info-card {
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow);
