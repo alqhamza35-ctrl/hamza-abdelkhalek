@@ -40,6 +40,8 @@ const translations = {
     "project2-desc": { "ar": "موقع Aureum - تصميم أنيق وعصري", "en": "Aureum website - elegant and modern design" },
     "project3-title": { "ar": "اختبار رياضيات", "en": "Math Quiz" },
     "project3-desc": { "ar": "تطبيق اختبار في مادة الرياضيات", "en": "A quiz application for math" },
+    "project4-title": { "ar": "حاسبة رياضيات بالذكاء الاصطناعي", "en": "AI Math Solver" },
+    "project4-desc": { "ar": "حل مسائل رياضية باستخدام الذكاء الاصطناعي", "en": "Solve math problems using AI" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
