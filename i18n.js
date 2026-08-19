@@ -44,6 +44,8 @@ const translations = {
     "project4-desc": { "ar": "حل مسائل رياضية باستخدام الذكاء الاصطناعي", "en": "Solve math problems using AI" },
     "project5-title": { "ar": "العودة للمدرسة", "en": "Back To School" },
     "project5-desc": { "ar": "موقع العودة للمدرسة", "en": "Back to school website" },
+    "project6-title": { "ar": "مرحباً بعودتك للجامعة", "en": "Welcome Back to University" },
+    "project6-desc": { "ar": "موقع مرحباً بالعودة للجامعة", "en": "Welcome back to university website" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
