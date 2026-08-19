@@ -42,6 +42,8 @@ const translations = {
     "project3-desc": { "ar": "تطبيق اختبار في مادة الرياضيات", "en": "A quiz application for math" },
     "project4-title": { "ar": "حاسبة رياضيات بالذكاء الاصطناعي", "en": "AI Math Solver" },
     "project4-desc": { "ar": "حل مسائل رياضية باستخدام الذكاء الاصطناعي", "en": "Solve math problems using AI" },
+    "project5-title": { "ar": "العودة للمدرسة", "en": "Back To School" },
+    "project5-desc": { "ar": "موقع العودة للمدرسة", "en": "Back to school website" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
