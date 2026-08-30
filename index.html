@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Abdelkhalek | مهندس برمجيات</title>
     <meta name="description" content="موقع Hamza Abdelkhalek الشخصي - مهندس برمجيات متخصص في تطوير الويب">
+    <meta name="keywords" content="Hamza Abdelkhalek, مهندس برمجيات, تطوير ويب, Web Developer, Portfolio">
+    <meta name="author" content="Hamza Abdelkhalek">
+    <meta property="og:title" content="Hamza Abdelkhalek | مهندس برمجيات">
+    <meta property="og:description" content="موقع Hamza Abdelkhalek الشخصي - مهندس برمجيات متخصص في تطوير الويب">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="me.png">
 </head>
 <body>
 
-    <!-- ========================================
-         شريط التنقل (Navbar)
-         ======================================== -->
     <nav class="navbar">
         <div class="container">
-            <!-- الشعار -->
             <a href="index.html" class="logo">
-                Hamza Abdelkhalek
+                Hamza <span>Abdelkhalek</span>
             </a>
 
-            <!-- قائمة الروابط -->
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
                 <li><a href="about.html" data-i18n="about">عني</a></li>
@@ -28,15 +29,9 @@
                 <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
             </ul>
 
-            <!-- أزرار التحكم -->
             <div class="header-controls">
-                <!-- زر تبديل اللغة -->
                 <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-
-                <!-- زر تبديل الوضع -->
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
-                <!-- قائمة الجوال -->
+                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
                 <div class="mobile-menu">
                     <span></span>
                     <span></span>
@@ -46,16 +41,13 @@
         </div>
     </nav>
 
-    <!-- ========================================
-         القسم الرئيسي (Hero Section)
-         ======================================== -->
     <section class="hero">
         <div class="container">
-            <!-- المحتوى الرئيسي -->
             <div class="hero-content">
+                <p class="hero-badge" data-i18n="hero-badge">متاح للعمل الحر</p>
                 <h1 data-i18n="greeting">!مرحباً، أنا</h1>
                 <h1><span data-i18n="name">حمزة عبد الخالق</span></h1>
-                <p class="subtitle" data-i18n="title">مهندس برمجيات</p>
+                <p class="subtitle"><span class="typing-text" data-i18n="title">مهندس برمجيات</span><span class="cursor">|</span></p>
                 <p data-i18n="hero-description">
                     أقوم بإنشاء مواقع وتطبيقات ويب حديثة وعملية. أحب تحويل الأفكار إلى واقع رقمي مميز.
                 </p>
@@ -63,9 +55,22 @@
                     <a href="projects.html" class="btn btn-primary" data-i18n="view-projects">عرض المشاريع</a>
                     <a href="contact.html" class="btn btn-secondary" data-i18n="contact-me">تواصل معي</a>
                 </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label" data-i18n="stat-projects">مشروع</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label" data-i18n="stat-certs">شهادة</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label" data-i18n="stat-exp">سنة خبرة</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- صورة الملف الشخصي -->
             <div class="hero-image">
                 <div class="profile-img">
                     <img src="me.png" alt="Hamza Abdelkhalek">
@@ -74,7 +79,38 @@
         </div>
     </section>
 
-    <!-- ربط الملفات -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
+                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="about">عني</a></li>
+                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-social">تابعني</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
+                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
+
     <script src="i18n.js"></script>
     <script src="main.js"></script>
 

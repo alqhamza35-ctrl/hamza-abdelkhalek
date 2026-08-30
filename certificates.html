@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الشهادات | Hamza Abdelkhalek</title>
+    <meta name="description" content="شهادات Hamza Abdelkhalek - مهندس برمجيات">
+    <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Hamza Abdelkhalek</a>
+            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
 
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
@@ -22,7 +24,7 @@
 
             <div class="header-controls">
                 <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
                 <div class="mobile-menu">
                     <span></span>
                     <span></span>
@@ -32,11 +34,12 @@
         </div>
     </nav>
 
-    <section class="certificates" style="padding-top: 120px;">
+    <section class="certificates" style="padding-top: 120px; min-height: 100vh;">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="certificates-title">شهاداتي</h2>
                 <p data-i18n="certificates-subtitle">الشهادات والاعتمادات التي حصلت عليها</p>
+                <p class="cert-count"><span>6</span> <span data-i18n="cert-total">شهادة</span></p>
             </div>
 
             <div class="certificates-grid">
@@ -116,6 +119,38 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
+                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="about">عني</a></li>
+                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-social">تابعني</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
+                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
 
     <script src="i18n.js"></script>
     <script src="main.js"></script>

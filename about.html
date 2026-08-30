@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عني | Hamza Abdelkhalek</title>
+    <meta name="description" content="تعرف على Hamza Abdelkhalek - مهندس برمجيات">
+    <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ========================================
-         شريط التنقل (Navbar)
-         ======================================== -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                Hamza Abdelkhalek
-            </a>
+            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
 
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
@@ -27,7 +24,7 @@
 
             <div class="header-controls">
                 <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
                 <div class="mobile-menu">
                     <span></span>
                     <span></span>
@@ -37,20 +34,14 @@
         </div>
     </nav>
 
-    <!-- ========================================
-         قسم عني (About Section)
-         ======================================== -->
-    <section class="about" style="padding-top: 120px;">
+    <section class="about" style="padding-top: 120px; min-height: 100vh;">
         <div class="container">
-            <!-- عنوان القسم -->
             <div class="section-header">
                 <h2 data-i18n="about-title">نبذة عني</h2>
                 <p data-i18n="about-subtitle">تعرّف عليّ أكثر</p>
             </div>
 
-            <!-- محتوى عني -->
             <div class="about-content">
-                <!-- النص -->
                 <div class="about-text">
                     <h3 data-i18n="name">حمزة عبد الخالق</h3>
                     <p data-i18n="about-text-1">
@@ -60,11 +51,9 @@
                         أؤمن بأن الكود النظيف والتصميم الجيد هما أساس أي مشروع ناجح. أسعى دائماً لتقديم أفضل الحلول لعملائي.
                     </p>
 
-                    <!-- شريط المهارات -->
                     <div class="skills-bar">
                         <h4 data-i18n="skills-title">مهاراتي</h4>
 
-                        <!-- HTML -->
                         <div class="skill-item">
                             <div class="skill-header">
                                 <span class="skill-name" data-i18n="html-skill">HTML</span>
@@ -75,7 +64,6 @@
                             </div>
                         </div>
 
-                        <!-- CSS -->
                         <div class="skill-item">
                             <div class="skill-header">
                                 <span class="skill-name" data-i18n="css-skill">CSS</span>
@@ -86,7 +74,6 @@
                             </div>
                         </div>
 
-                        <!-- JavaScript -->
                         <div class="skill-item">
                             <div class="skill-header">
                                 <span class="skill-name" data-i18n="js-skill">JavaScript</span>
@@ -96,50 +83,95 @@
                                 <div class="progress" data-width="80%"></div>
                             </div>
                         </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="progress" data-width="70%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- بطاقة المعلومات -->
                 <div class="about-info-card">
-                    <!-- الاسم -->
                     <div class="info-item">
-                        <div class="icon">👤</div>
+                        <div class="icon">&#128100;</div>
                         <div class="info-text">
                             <h4 data-i18n="name-label">الاسم</h4>
                             <p data-i18n="name-value">حمزة عبد الخالق</p>
                         </div>
                     </div>
 
-                    <!-- البريد الإلكتروني -->
                     <div class="info-item">
-                        <div class="icon">📧</div>
+                        <div class="icon">&#128231;</div>
                         <div class="info-text">
                             <h4 data-i18n="email-label">البريد الإلكتروني</h4>
                             <p data-i18n="email-value">alqhamza35@gmail.com</p>
                         </div>
                     </div>
 
-                    <!-- الموقع -->
                     <div class="info-item">
-                        <div class="icon">📍</div>
+                        <div class="icon">&#128205;</div>
                         <div class="info-text">
                             <h4 data-i18n="location-label">الموقع</h4>
                             <p data-i18n="location-value">مصر</p>
                         </div>
                     </div>
 
-                    <!-- الخبرة -->
                     <div class="info-item">
-                        <div class="icon">💼</div>
+                        <div class="icon">&#128188;</div>
                         <div class="info-text">
                             <h4 data-i18n="experience-label">الخبرة</h4>
                             <p data-i18n="experience-value">+1 سنوات</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">&#127891;</div>
+                        <div class="info-text">
+                            <h4 data-i18n="education-label">التعليم</h4>
+                            <p data-i18n="education-value">طالب جامعي</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
+                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="about">عني</a></li>
+                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-social">تابعني</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
+                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
 
     <script src="i18n.js"></script>
     <script src="main.js"></script>

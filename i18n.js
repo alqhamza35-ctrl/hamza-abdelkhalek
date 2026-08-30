@@ -7,12 +7,16 @@ const translations = {
     "certificates": { "ar": "الشهادات", "en": "Certificates" },
 
     // Hero
+    "hero-badge": { "ar": "متاح للعمل الحر", "en": "Available for Freelance" },
     "greeting": { "ar": "!مرحباً، أنا", "en": "Hello, I'm" },
     "name": { "ar": "حمزة عبد الخالق", "en": "Hamza Abdelkhalek" },
     "title": { "ar": "مهندس برمجيات", "en": "Software Engineer" },
     "hero-description": { "ar": "أقوم بإنشاء مواقع وتطبيقات ويب حديثة وعملية. أحب تحويل الأفكار إلى واقع رقمي مميز.", "en": "I build modern and practical web applications and websites. I love turning ideas into outstanding digital reality." },
     "view-projects": { "ar": "عرض المشاريع", "en": "View Projects" },
     "contact-me": { "ar": "تواصل معي", "en": "Contact Me" },
+    "stat-projects": { "ar": "مشروع", "en": "Projects" },
+    "stat-certs": { "ar": "شهادة", "en": "Certificates" },
+    "stat-exp": { "ar": "سنة خبرة", "en": "Years Experience" },
 
     // About
     "about-title": { "ar": "نبذة عني", "en": "About Me" },
@@ -27,6 +31,8 @@ const translations = {
     "location-value": { "ar": "مصر", "en": "Egypt" },
     "experience-label": { "ar": "الخبرة", "en": "Experience" },
     "experience-value": { "ar": "+1 سنوات", "en": "+1 Year" },
+    "education-label": { "ar": "التعليم", "en": "Education" },
+    "education-value": { "ar": "طالب جامعي", "en": "University Student" },
     "skills-title": { "ar": "مهاراتي", "en": "My Skills" },
     "html-skill": { "ar": "HTML", "en": "HTML" },
     "css-skill": { "ar": "CSS", "en": "CSS" },
@@ -35,6 +41,8 @@ const translations = {
     // Projects
     "projects-title": { "ar": "مشاريعي", "en": "My Projects" },
     "projects-subtitle": { "ar": "أحدث الأعمال التي قمت بتنفيذها", "en": "Latest Works I've Done" },
+    "projects-total": { "ar": "مشروع", "en": "Projects" },
+    "filter-all": { "ar": "الكل", "en": "All" },
     "project1-title": { "ar": "تعلم صنع مواقع", "en": "Learn Web Development" },
     "project1-desc": { "ar": "تعلم إنشاء مواقع الويب مع OsamaZero", "en": "Learn web development with OsamaZero" },
     "project2-desc": { "ar": "موقع Aureum - تصميم أنيق وعصري", "en": "Aureum website - elegant and modern design" },
@@ -46,11 +54,14 @@ const translations = {
     "project5-desc": { "ar": "موقع العودة للمدرسة", "en": "Back to school website" },
     "project6-title": { "ar": "مرحباً بعودتك للجامعة", "en": "Welcome Back to University" },
     "project6-desc": { "ar": "موقع مرحباً بالعودة للجامعة", "en": "Welcome back to university website" },
+    "project7-title": { "ar": "مساعد السباح", "en": "Swimmer Assistant" },
+    "project7-desc": { "ar": "تطبيق مساعد للسباحة", "en": "A swimming assistant app" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
     "certificates-title": { "ar": "شهاداتي", "en": "My Certificates" },
     "certificates-subtitle": { "ar": "الشهادات والاعتمادات التي حصلت عليها", "en": "Certifications and credentials I've earned" },
+    "cert-total": { "ar": "شهادة", "en": "Certificates" },
     "cert1-title": { "ar": "مبادرة مصر الرقمية", "en": "Digital Egypt Marvels Initiative" },
     "cert1-issuer": { "ar": "وزارة الاتصالات وتكنولوجيا المعلومات", "en": "Ministry of Communications and Information Technology" },
     "cert2-title": { "ar": "ساعة البرمجة", "en": "Hour of Code" },
@@ -75,6 +86,19 @@ const translations = {
     "location-info": { "ar": "مصر", "en": "Egypt" },
     "github-link": { "ar": "🐙 GitHub", "en": "🐙 GitHub" },
 
+    // Contact Form
+    "form-name": { "ar": "الاسم", "en": "Name" },
+    "form-email": { "ar": "البريد الإلكتروني", "en": "Email" },
+    "form-subject": { "ar": "الموضوع", "en": "Subject" },
+    "form-message": { "ar": "الرسالة", "en": "Message" },
+    "form-send": { "ar": "إرسال الرسالة", "en": "Send Message" },
+
+    // Footer
+    "footer-desc": { "ar": "مهندس برمجيات متخصص في تطوير الويب", "en": "Software Engineer specialized in web development" },
+    "footer-quick": { "ar": "روابط سريعة", "en": "Quick Links" },
+    "footer-social": { "ar": "تابعني", "en": "Follow Me" },
+    "footer-rights": { "ar": "جميع الحقوق محفوظة", "en": "All rights reserved" },
+
     // Controls
     "lang-button": { "ar": "EN", "en": "AR" }
 };
@@ -92,6 +116,13 @@ function changeLanguage(lang) {
         const key = element.getAttribute('data-i18n');
         if (translations[key] && translations[key][lang]) {
             element.textContent = translations[key][lang];
+        }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[key] && translations[key][lang]) {
+            element.placeholder = translations[key][lang];
         }
     });
 

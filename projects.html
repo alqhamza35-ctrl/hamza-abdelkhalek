@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المشاريع | Hamza Abdelkhalek</title>
+    <meta name="description" content="مشاريع Hamza Abdelkhalek - مهندس برمجيات">
+    <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                Hamza Abdelkhalek
-            </a>
+            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
 
             <ul class="nav-links">
                 <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
@@ -24,7 +24,7 @@
 
             <div class="header-controls">
                 <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
                 <div class="mobile-menu">
                     <span></span>
                     <span></span>
@@ -34,17 +34,24 @@
         </div>
     </nav>
 
-    <section class="projects" style="padding-top: 120px;">
+    <section class="projects" style="padding-top: 120px; min-height: 100vh;">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="projects-title">مشاريعي</h2>
                 <p data-i18n="projects-subtitle">أحدث الأعمال التي قمت بتنفيذها</p>
+                <p class="project-count"><span id="projectCount">7</span> <span data-i18n="projects-total">مشروع</span></p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">الكل</button>
+                <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                <button class="filter-btn" data-filter="js">JavaScript</button>
             </div>
 
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-image">🌐</div>
+                <div class="project-card" data-tags="html-css">
+                    <div class="project-image">&#127760;</div>
                     <div class="project-content">
                         <h3 data-i18n="project1-title">تعلم صنع مواقع</h3>
                         <p data-i18n="project1-desc">تعلم إنشاء مواقع الويب مع OsamaZero</p>
@@ -58,8 +65,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">💎</div>
+                <div class="project-card" data-tags="html-css js">
+                    <div class="project-image">&#128142;</div>
                     <div class="project-content">
                         <h3>Aureum</h3>
                         <p data-i18n="project2-desc">موقع Aureum - تصميم أنيق وعصري</p>
@@ -74,8 +81,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">🧮</div>
+                <div class="project-card" data-tags="html-css js">
+                    <div class="project-image">&#129518;</div>
                     <div class="project-content">
                         <h3 data-i18n="project3-title">اختبار رياضيات</h3>
                         <p data-i18n="project3-desc">تطبيق اختبار في مادة الرياضيات</p>
@@ -90,8 +97,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">🤖</div>
+                <div class="project-card" data-tags="html-css js">
+                    <div class="project-image">&#129302;</div>
                     <div class="project-content">
                         <h3 data-i18n="project4-title">حاسبة رياضيات بالذكاء الاصطناعي</h3>
                         <p data-i18n="project4-desc">حل مسائل رياضية باستخدام الذكاء الاصطناعي</p>
@@ -100,7 +107,6 @@
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>KaTeX</span>
-                            <span>Math.js</span>
                         </div>
                         <div class="project-links">
                             <a href="https://alqhamza35-ctrl.github.io/math-calculate/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
@@ -108,8 +114,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">🎒</div>
+                <div class="project-card" data-tags="html-css">
+                    <div class="project-image">&#127890;</div>
                     <div class="project-content">
                         <h3 data-i18n="project5-title">العودة للمدرسة</h3>
                         <p data-i18n="project5-desc">موقع العودة للمدرسة</p>
@@ -123,8 +129,8 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">🎓</div>
+                <div class="project-card" data-tags="html-css">
+                    <div class="project-image">&#127891;</div>
                     <div class="project-content">
                         <h3 data-i18n="project6-title">مرحباً بعودتك للجامعة</h3>
                         <p data-i18n="project6-desc">موقع مرحباً بالعودة للجامعة</p>
@@ -138,9 +144,57 @@
                     </div>
                 </div>
 
+                <div class="project-card" data-tags="html-css js">
+                    <div class="project-image">&#127946;</div>
+                    <div class="project-content">
+                        <h3 data-i18n="project7-title">مساعد السباح</h3>
+                        <p data-i18n="project7-desc">تطبيق مساعد للسباحة</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://alqhamza35-ctrl.github.io/Swimmer-Assistant/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
+                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="about">عني</a></li>
+                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-social">تابعني</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
+                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
 
     <script src="i18n.js"></script>
     <script src="main.js"></script>
