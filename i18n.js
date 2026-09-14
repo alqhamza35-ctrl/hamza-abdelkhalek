@@ -58,6 +58,8 @@ const translations = {
     "project7-desc": { "ar": "تطبيق مساعد للسباحة", "en": "A swimming assistant app" },
     "project8-title": { "ar": "مُدَكِّر", "en": "Modaker" },
     "project8-desc": { "ar": "تطبيق تذكير ذكي", "en": "A smart reminder app" },
+    "project9-title": { "ar": "EduFocus Canvas", "en": "EduFocus Canvas" },
+    "project9-desc": { "ar": "أداة تعليمية ذكية تجمع بين رفع الملفات، مؤقت بومودورو، ملاحظات لاصقة، ولوحة رسم تفاعلية", "en": "Smart educational tool combining file upload, pomodoro timer, sticky notes, and interactive drawing canvas" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
