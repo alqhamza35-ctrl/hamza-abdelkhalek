@@ -56,6 +56,8 @@ const translations = {
     "project6-desc": { "ar": "موقع مرحباً بالعودة للجامعة", "en": "Welcome back to university website" },
     "project7-title": { "ar": "مساعد السباح", "en": "Swimmer Assistant" },
     "project7-desc": { "ar": "تطبيق مساعد للسباحة", "en": "A swimming assistant app" },
+    "project8-title": { "ar": "مُدَكِّر", "en": "Modaker" },
+    "project8-desc": { "ar": "تطبيق تذكير ذكي", "en": "A smart reminder app" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
