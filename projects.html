@@ -3,248 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المشاريع | Hamza Abdelkhalek</title>
-    <meta name="description" content="مشاريع Hamza Abdelkhalek - مهندس برمجيات">
+    <meta name="description" content="مجموعة مشاريع حمزة عبد الخالق في الويب والتعليم والأدوات العملية.">
     <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
+    <title>المشاريع | حمزة عبد الخالق</title>
 </head>
-<body>
-
-    <nav class="navbar">
+<body data-page="projects">
+    <a class="skip-link" href="#main-content" data-i18n="skip-content">انتقل إلى المحتوى</a>
+    <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                <li><a href="about.html" data-i18n="about">عني</a></li>
-                <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                <li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li>
-                <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-            </ul>
-
+            <a class="brand" href="index.html" aria-label="Hamza Abdelkhalek">Hamza <span>Abdelkhalek</span></a>
+            <nav aria-label="التنقل الرئيسي" data-i18n-aria="nav-label">
+                <ul class="nav-links" id="primary-navigation">
+                    <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="about.html" data-i18n="about">عني</a></li>
+                    <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                    <li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li>
+                    <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                </ul>
+            </nav>
             <div class="header-controls">
-                <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="control-button lang-toggle" type="button" data-i18n-aria="language-switch">EN</button>
+                <button class="control-button theme-toggle" type="button" aria-pressed="false" data-i18n-aria="theme-switch"><span class="theme-symbol" aria-hidden="true">◐</span></button>
+                <button class="mobile-menu" type="button" aria-controls="primary-navigation" aria-expanded="false" data-i18n-aria="mobile-menu"><span></span><span></span><span></span></button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="projects" style="padding-top: 120px; min-height: 100vh;">
+    <main id="main-content">
+        <section class="page-intro">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" data-i18n="projects-label">محفظة الأعمال</p>
+                    <h1 data-i18n="projects-heading">مشاريع مبنية للتعلّم والاستخدام</h1>
+                    <p data-i18n="projects-copy">استخدم التصنيفات لاستعراض المشاريع بحسب التقنيات أو المجال.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="filter-bar" aria-label="Project filters">
+                    <button class="filter-button project-filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter-all">الكل</button>
+                    <button class="filter-button project-filter-button" type="button" data-filter="html-css" aria-pressed="false" data-i18n="filter-html-css">HTML و CSS</button>
+                    <button class="filter-button project-filter-button" type="button" data-filter="js" aria-pressed="false" data-i18n="filter-javascript">JavaScript</button>
+                    <button class="filter-button project-filter-button" type="button" data-filter="education" aria-pressed="false" data-i18n="filter-education">تعليم</button>
+                    <button class="filter-button project-filter-button" type="button" data-filter="utilities" aria-pressed="false" data-i18n="filter-utilities">أدوات</button>
+                </div>
+                <p class="result-summary"><span id="projectCount" aria-live="polite">10</span> <span data-i18n="projects-shown">مشروع ظاهر</span></p>
+                <p class="empty-state" id="projectEmptyState" hidden data-i18n="no-projects">لا توجد مشاريع في هذا التصنيف حالياً.</p>
+
+                <div class="card-grid">
+                    <article class="project-card" data-tags="html-css education" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project1-title">تعلّم صنع مواقع</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project1-title">تعلّم صنع مواقع</h2>
+                            <p data-i18n="project1-desc">رحلة عملية لتعلّم أساسيات تصميم صفحات الويب مع OsamaZero.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza55gg-spec.github.io/-Learning-to-make-website-with-OsamaZero/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project2-title">Aureum</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project2-title">Aureum</h2>
+                            <p data-i18n="project2-desc">واجهة موقع بتصميم أنيق يركّز على الهوية البصرية.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamoz35-droid.github.io/Aureum/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js education" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project3-title">اختبار رياضيات</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project3-title">اختبار رياضيات</h2>
+                            <p data-i18n="project3-desc">تجربة اختبار تفاعلية لمراجعة مسائل الرياضيات.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/test-math-09/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js utilities" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project4-title">حاسبة رياضيات بالذكاء الاصطناعي</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project4-title">حاسبة رياضيات بالذكاء الاصطناعي</h2>
+                            <p data-i18n="project4-desc">واجهة تساعد على التعامل مع المسائل الرياضية وعرضها بوضوح.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>KaTeX</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/math-calculate/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css education" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project5-title">العودة للمدرسة</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project5-title">العودة للمدرسة</h2>
+                            <p data-i18n="project5-desc">صفحة ويب مخصصة لموسم العودة إلى المدرسة.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/Back-To-School/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css education" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project6-title">مرحباً بعودتك للجامعة</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project6-title">مرحباً بعودتك للجامعة</h2>
+                            <p data-i18n="project6-desc">تجربة ترحيبية موجهة للطلاب في بداية العام الجامعي.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/welcom-back-to-the-university/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js utilities" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project7-title">مساعد السباح</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project7-title">مساعد السباح</h2>
+                            <p data-i18n="project7-desc">تطبيق ويب بسيط مخصص للمساعدة في أنشطة السباحة.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/Swimmer-Assistant/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css utilities" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project8-title">مُذَكِّر</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project8-title">مُذَكِّر</h2>
+                            <p data-i18n="project8-desc">أداة لتسجيل التذكيرات بطريقة مباشرة ومنظمة.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/Modaker/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js education" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project9-title">EduFocus Canvas</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project9-title">EduFocus Canvas</h2>
+                            <p data-i18n="project9-desc">مساحة تعليمية تجمع الملفات والمؤقت والملاحظات ولوحة الرسم.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/EduFocus-Canvas/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="html-css js utilities" data-reveal>
+                        <div class="project-art"><span data-i18n="project-type">مشروع ويب</span><strong data-i18n="project10-title">مولد رمز QR</strong></div>
+                        <div class="project-body">
+                            <h2 data-i18n="project10-title">مولد رمز QR</h2>
+                            <p data-i18n="project10-desc">أداة ويب لإنشاء رموز QR مخصصة بسهولة.</p>
+                            <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <a class="button button-secondary button-compact" href="https://alqhamza35-ctrl.github.io/QR-Code-Generator/" target="_blank" rel="noopener noreferrer" data-i18n="live-demo">فتح المشروع</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="projects-title">مشاريعي</h2>
-                <p data-i18n="projects-subtitle">أحدث الأعمال التي قمت بتنفيذها</p>
-                <p class="project-count"><span id="projectCount">10</span> <span data-i18n="projects-total">مشروع</span></p>
+            <div class="footer-grid">
+                <div><a class="brand" href="index.html">Hamza <span>Abdelkhalek</span></a><p data-i18n="footer-copy">مهتم بتطوير تجارب ويب مفيدة وواضحة.</p></div>
+                <div><h2 class="footer-title" data-i18n="footer-navigation">التنقل</h2><ul class="footer-links"><li><a href="about.html" data-i18n="about">عني</a></li><li><a href="projects.html" data-i18n="projects">المشاريع</a></li><li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li></ul></div>
+                <div><h2 class="footer-title" data-i18n="footer-connect">تواصل</h2><ul class="footer-links"><li><a href="mailto:alqhamza35@gmail.com">alqhamza35@gmail.com</a></li><li><a href="https://github.com/alqhamza35-ctrl" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></div>
             </div>
-
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">الكل</button>
-                <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-                <button class="filter-btn" data-filter="js">JavaScript</button>
-            </div>
-
-            <div class="projects-grid">
-
-                <div class="project-card" data-tags="html-css">
-                    <div class="project-image">&#127760;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project1-title">تعلم صنع مواقع</h3>
-                        <p data-i18n="project1-desc">تعلم إنشاء مواقع الويب مع OsamaZero</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza55gg-spec.github.io/-Learning-to-make-website-with-OsamaZero/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#128142;</div>
-                    <div class="project-content">
-                        <h3>Aureum</h3>
-                        <p data-i18n="project2-desc">موقع Aureum - تصميم أنيق وعصري</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamoz35-droid.github.io/Aureum/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#129518;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project3-title">اختبار رياضيات</h3>
-                        <p data-i18n="project3-desc">تطبيق اختبار في مادة الرياضيات</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/test-math-09/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#129302;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project4-title">حاسبة رياضيات بالذكاء الاصطناعي</h3>
-                        <p data-i18n="project4-desc">حل مسائل رياضية باستخدام الذكاء الاصطناعي</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>KaTeX</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/math-calculate/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css">
-                    <div class="project-image">&#127890;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project5-title">العودة للمدرسة</h3>
-                        <p data-i18n="project5-desc">موقع العودة للمدرسة</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/Back-To-School/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css">
-                    <div class="project-image">&#127891;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project6-title">مرحباً بعودتك للجامعة</h3>
-                        <p data-i18n="project6-desc">موقع مرحباً بالعودة للجامعة</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/welcom-back-to-the-university/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#127946;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project7-title">مساعد السباح</h3>
-                        <p data-i18n="project7-desc">تطبيق مساعد للسباحة</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/Swimmer-Assistant/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css">
-                    <div class="project-image">&#127912;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project8-title">مُدَكِّر</h3>
-                        <p data-i18n="project8-desc">تطبيق تذكير ذكي</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/Modaker/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#128218;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project9-title">EduFocus Canvas</h3>
-                        <p data-i18n="project9-desc">أداة تعليمية ذكية تجمع بين رفع الملفات، مؤقت بومودورو، ملاحظات لاصقة، ولوحة رسم تفاعلية</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/EduFocus-Canvas/" target="_blank" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="html-css js">
-                    <div class="project-image">&#128273;</div>
-                    <div class="project-content">
-                        <h3 data-i18n="project10-title">مولد رمز QR</h3>
-                        <p data-i18n="project10-desc">أداة سهلة لإنشاء رموز QR مخصصة</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://alqhamza35-ctrl.github.io/QR-Code-Generator/" target="_blank" rel="noopener noreferrer" class="live-link" data-i18n="live-demo">معاينة مباشرة</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
-                    <ul>
-                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                        <li><a href="about.html" data-i18n="about">عني</a></li>
-                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4 data-i18n="footer-social">تابعني</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
-                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
-            </div>
+            <p class="footer-bottom">© 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة.</span></p>
         </div>
     </footer>
-
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
-
+    <button class="scroll-top" id="scrollTop" type="button" data-i18n-aria="scroll-top">↑</button>
     <script src="i18n.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>

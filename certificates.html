@@ -3,157 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الشهادات | Hamza Abdelkhalek</title>
-    <meta name="description" content="شهادات Hamza Abdelkhalek - مهندس برمجيات">
+    <meta name="description" content="الشهادات والبرامج التعليمية التي أكملها حمزة عبد الخالق.">
     <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
+    <title>الشهادات | حمزة عبد الخالق</title>
 </head>
-<body>
-
-    <nav class="navbar">
+<body data-page="certificates">
+    <a class="skip-link" href="#main-content" data-i18n="skip-content">انتقل إلى المحتوى</a>
+    <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                <li><a href="about.html" data-i18n="about">عني</a></li>
-                <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                <li><a href="certificates.html" class="active" data-i18n="certificates">الشهادات</a></li>
-                <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-            </ul>
-
+            <a class="brand" href="index.html" aria-label="Hamza Abdelkhalek">Hamza <span>Abdelkhalek</span></a>
+            <nav aria-label="التنقل الرئيسي" data-i18n-aria="nav-label">
+                <ul class="nav-links" id="primary-navigation">
+                    <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="about.html" data-i18n="about">عني</a></li>
+                    <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                    <li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li>
+                    <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
+                </ul>
+            </nav>
             <div class="header-controls">
-                <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="control-button lang-toggle" type="button" data-i18n-aria="language-switch">EN</button>
+                <button class="control-button theme-toggle" type="button" aria-pressed="false" data-i18n-aria="theme-switch"><span class="theme-symbol" aria-hidden="true">◐</span></button>
+                <button class="mobile-menu" type="button" aria-controls="primary-navigation" aria-expanded="false" data-i18n-aria="mobile-menu"><span></span><span></span><span></span></button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="certificates" style="padding-top: 120px; min-height: 100vh;">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="certificates-title">شهاداتي</h2>
-                <p data-i18n="certificates-subtitle">الشهادات والاعتمادات التي حصلت عليها</p>
-                <p class="cert-count"><span>6</span> <span data-i18n="cert-total">شهادة</span></p>
+    <main id="main-content">
+        <section class="page-intro">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow" data-i18n="certificates-label">التعلّم والاعتمادات</p>
+                    <h1 data-i18n="certificates-heading">شهادات توثّق مسار التعلّم</h1>
+                    <p data-i18n="certificates-copy">شهادات من مبادرات وبرامج تدريبية في البرمجة والذكاء الاصطناعي والحوسبة السحابية والبيانات.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="certificates-grid">
-
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="certificate_DEMI4-S-206326.jpg" alt="DEMI">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert1-title">مبادرة مصر الرقمية</h3>
-                        <p class="certificate-issuer" data-i18n="cert1-issuer">وزارة الاتصالات وتكنولوجيا المعلومات</p>
-                        <p class="certificate-date">Sep 2025</p>
-                        <span class="certificate-badge">DEMI - Level5</span>
-                    </div>
+        <section class="featured-section">
+            <div class="container">
+                <div class="filter-bar" aria-label="Certificate filters">
+                    <button class="filter-button certificate-filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter-all">الكل</button>
+                    <button class="filter-button certificate-filter-button" type="button" data-filter="digital-egypt" aria-pressed="false" data-i18n="filter-digital-egypt">مصر الرقمية</button>
+                    <button class="filter-button certificate-filter-button" type="button" data-filter="huawei" aria-pressed="false" data-i18n="filter-huawei">Huawei ICT</button>
+                    <button class="filter-button certificate-filter-button" type="button" data-filter="code" aria-pressed="false" data-i18n="filter-code">Code.org</button>
                 </div>
+                <p class="result-summary"><span id="certificateCount" aria-live="polite">6</span> <span data-i18n="certificates-shown">شهادة ظاهرة</span></p>
+                <p class="empty-state" id="certificateEmptyState" hidden data-i18n="no-certificates">لا توجد شهادات في هذا التصنيف حالياً.</p>
 
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IMG-20250625-WA0002.jpg" alt="Hour of Code">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert2-title">ساعة البرمجة</h3>
-                        <p class="certificate-issuer">Code.org & Minecraft</p>
-                        <p class="certificate-date">2024</p>
-                        <span class="certificate-badge">Computer Science</span>
-                    </div>
+                <div class="card-grid">
+                    <article class="certificate-card" data-tags="digital-egypt" data-reveal>
+                        <div class="certificate-preview"><img src="certificate_DEMI4-S-206326.jpg" alt="Digital Egypt Marvels Initiative certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert1-title">مبادرة مصر الرقمية</h2>
+                            <p class="certificate-issuer" data-i18n="cert1-issuer">وزارة الاتصالات وتكنولوجيا المعلومات</p>
+                            <p class="certificate-meta">Sep 2025 · DEMI - Level 5</p>
+                            <span class="certificate-badge">DEMI - Level 5</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="certificate_DEMI4-S-206326.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
+                    <article class="certificate-card" data-tags="code" data-reveal>
+                        <div class="certificate-preview"><img src="IMG-20250625-WA0002.jpg" alt="Hour of Code certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert2-title">ساعة البرمجة</h2>
+                            <p class="certificate-issuer" data-i18n="cert2-issuer">Code.org &amp; Minecraft</p>
+                            <p class="certificate-meta">2024 · Computer Science</p>
+                            <span class="certificate-badge">Computer Science</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="IMG-20250625-WA0002.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
+                    <article class="certificate-card" data-tags="huawei" data-reveal>
+                        <div class="certificate-preview"><img src="IMG-20251226-WA0000.jpg" alt="Overview of AI certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert3-title">مقدمة في الذكاء الاصطناعي</h2>
+                            <p class="certificate-issuer" data-i18n="cert3-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
+                            <p class="certificate-meta">2025-12-27 · ICT20251227015157</p>
+                            <span class="certificate-badge">Artificial Intelligence</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="IMG-20251226-WA0000.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
+                    <article class="certificate-card" data-tags="huawei" data-reveal>
+                        <div class="certificate-preview"><img src="IMG-20260120-WA0001.jpg" alt="Cloud Computing Basics certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert4-title">أساسيات الحوسبة السحابية</h2>
+                            <p class="certificate-issuer" data-i18n="cert4-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
+                            <p class="certificate-meta">2026-01-19 · ICT20260119019729</p>
+                            <span class="certificate-badge">Cloud Computing</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="IMG-20260120-WA0001.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
+                    <article class="certificate-card" data-tags="huawei" data-reveal>
+                        <div class="certificate-preview"><img src="IMG-20260130-WA0001.jpg" alt="Data Management and Analytics certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert5-title">إدارة البيانات وتحليلها</h2>
+                            <p class="certificate-issuer" data-i18n="cert5-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
+                            <p class="certificate-meta">2026-01-27 · ICT20260127036966</p>
+                            <span class="certificate-badge">Data Analytics</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="IMG-20260130-WA0001.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
+                    <article class="certificate-card" data-tags="huawei" data-reveal>
+                        <div class="certificate-preview"><img src="IMG-20260130-WA0002.jpg" alt="Data Management CRA Program certificate"></div>
+                        <div class="certificate-body">
+                            <h2 data-i18n="cert6-title">إدارة البيانات - برنامج CRA</h2>
+                            <p class="certificate-issuer" data-i18n="cert6-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
+                            <p class="certificate-meta">2026-01-27 · ICTCRA20260127037409</p>
+                            <span class="certificate-badge">CRA Program</span>
+                            <button class="button button-secondary button-compact certificate-view" type="button" data-image="IMG-20260130-WA0002.jpg" data-i18n="view-certificate">عرض الشهادة</button>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IMG-20251226-WA0000.jpg" alt="Overview of AI">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert3-title">مقدمة في الذكاء الاصطناعي</h3>
-                        <p class="certificate-issuer" data-i18n="cert3-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
-                        <p class="certificate-date">2025-12-27</p>
-                        <span class="certificate-badge">ICT20251227015157</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IMG-20260120-WA0001.jpg" alt="Cloud Computing">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert4-title">أساسيات الحوسبة السحابية</h3>
-                        <p class="certificate-issuer" data-i18n="cert4-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
-                        <p class="certificate-date">2026-01-19</p>
-                        <span class="certificate-badge">ICT20260119019729</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IMG-20260130-WA0001.jpg" alt="Data Management">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert5-title">إدارة البيانات وتحليلها</h3>
-                        <p class="certificate-issuer" data-i18n="cert5-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
-                        <p class="certificate-date">2026-01-27</p>
-                        <span class="certificate-badge">ICT20260127036966</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IMG-20260130-WA0002.jpg" alt="CRA">
-                    </div>
-                    <div class="certificate-content">
-                        <h3 data-i18n="cert6-title">إدارة البيانات - برنامج CRA</h3>
-                        <p class="certificate-issuer" data-i18n="cert6-issuer">أكاديمية هواوي لتكنولوجيا المعلومات</p>
-                        <p class="certificate-date">2026-01-27</p>
-                        <span class="certificate-badge">ICTCRA20260127037409</span>
-                    </div>
-                </div>
-
+    <dialog class="certificate-dialog" id="certificateModal" aria-labelledby="certificateModalTitle">
+        <div class="certificate-dialog-content">
+            <button class="dialog-close" type="button" data-dialog-close data-i18n-aria="dialog-close">×</button>
+            <img id="certificateModalImage" src="" alt="">
+            <div class="certificate-dialog-details">
+                <h2 id="certificateModalTitle"></h2>
+                <p id="certificateModalIssuer"></p>
+                <p id="certificateModalMetadata"></p>
             </div>
         </div>
-    </section>
+    </dialog>
 
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
-                    <ul>
-                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                        <li><a href="about.html" data-i18n="about">عني</a></li>
-                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4 data-i18n="footer-social">تابعني</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
-                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
-                    </div>
-                </div>
+            <div class="footer-grid">
+                <div><a class="brand" href="index.html">Hamza <span>Abdelkhalek</span></a><p data-i18n="footer-copy">مهتم بتطوير تجارب ويب مفيدة وواضحة.</p></div>
+                <div><h2 class="footer-title" data-i18n="footer-navigation">التنقل</h2><ul class="footer-links"><li><a href="about.html" data-i18n="about">عني</a></li><li><a href="projects.html" data-i18n="projects">المشاريع</a></li><li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li></ul></div>
+                <div><h2 class="footer-title" data-i18n="footer-connect">تواصل</h2><ul class="footer-links"><li><a href="mailto:alqhamza35@gmail.com">alqhamza35@gmail.com</a></li><li><a href="https://github.com/alqhamza35-ctrl" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
-            </div>
+            <p class="footer-bottom">© 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة.</span></p>
         </div>
     </footer>
-
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
-
+    <button class="scroll-top" id="scrollTop" type="button" data-i18n-aria="scroll-top">↑</button>
     <script src="i18n.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>

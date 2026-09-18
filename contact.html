@@ -3,120 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التواصل | Hamza Abdelkhalek</title>
-    <meta name="description" content="تواصل مع Hamza Abdelkhalek - مهندس برمجيات">
+    <meta name="description" content="تواصل مع حمزة عبد الخالق بشأن مشاريع الويب والفرص الجديدة.">
     <link rel="icon" type="image/png" href="me.png">
     <link rel="stylesheet" href="style.css">
+    <title>التواصل | حمزة عبد الخالق</title>
 </head>
-<body>
+<body data-page="contact">
+    <a class="skip-link" href="#main-content" data-i18n="skip-content">انتقل إلى المحتوى</a>
+    <header class="site-header"><div class="container"><a class="brand" href="index.html" aria-label="Hamza Abdelkhalek">Hamza <span>Abdelkhalek</span></a><nav aria-label="التنقل الرئيسي" data-i18n-aria="nav-label"><ul class="nav-links" id="primary-navigation"><li><a href="index.html" data-i18n="home">الرئيسية</a></li><li><a href="about.html" data-i18n="about">عني</a></li><li><a href="projects.html" data-i18n="projects">المشاريع</a></li><li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li><li><a href="contact.html" data-i18n="contact">التواصل</a></li></ul></nav><div class="header-controls"><button class="control-button lang-toggle" type="button" data-i18n-aria="language-switch">EN</button><button class="control-button theme-toggle" type="button" aria-pressed="false" data-i18n-aria="theme-switch"><span class="theme-symbol" aria-hidden="true">◐</span></button><button class="mobile-menu" type="button" aria-controls="primary-navigation" aria-expanded="false" data-i18n-aria="mobile-menu"><span></span><span></span><span></span></button></div></div></header>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                <li><a href="about.html" data-i18n="about">عني</a></li>
-                <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                <li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li>
-                <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-            </ul>
-
-            <div class="header-controls">
-                <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
-                <button class="theme-toggle" onclick="toggleTheme()">&#127769;</button>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <main id="main-content">
+        <section class="page-intro"><div class="container"><div class="section-heading" data-reveal><p class="eyebrow" data-i18n="contact-label">لنتواصل</p><h1 data-i18n="contact-heading">هل لديك فكرة أو فرصة جديدة؟</h1><p data-i18n="contact-copy">أرسل رسالة وسأفتحها في تطبيق البريد لديك، أو تواصل مباشرة باستخدام القنوات أدناه.</p></div></div></section>
+        <section><div class="container contact-layout">
+            <aside class="contact-card" data-reveal>
+                <h2 data-i18n="contact-direct-heading">تواصل مباشر</h2>
+                <p data-i18n="contact-copy">أرسل رسالة وسأفتحها في تطبيق البريد لديك، أو تواصل مباشرة باستخدام القنوات أدناه.</p>
+                <div class="contact-methods">
+                    <div class="contact-method"><span data-i18n="label-email">البريد الإلكتروني</span><a href="mailto:alqhamza35@gmail.com">alqhamza35@gmail.com</a><button class="text-action" type="button" data-copy-email data-i18n="copy-email">نسخ البريد</button></div>
+                    <div class="contact-method"><span data-i18n="phone">الهاتف</span><a href="tel:+201022317002" dir="ltr">01022317002</a></div>
+                    <div class="contact-method"><span data-i18n="label-location">الموقع</span><strong data-i18n="location-value">مصر</strong></div>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="contact" style="padding-top: 120px; min-height: 100vh;">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="contact-title">تواصل معي</h2>
-                <p data-i18n="contact-subtitle">لديك مشروع أو سؤال؟ أرسل لي رسالة</p>
-            </div>
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3 data-i18n="contact-description">
-                        أنا دائماً مفتوح لفرص جديدة ومشاريع مثيرة. لا تتردد في التواصل معي!
-                    </h3>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="icon">&#128231;</div>
-                            <div class="text">
-                                <h4 data-i18n="email-title">البريد الإلكتروني</h4>
-                                <p>alqhamza35@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="icon">&#128241;</div>
-                            <div class="text">
-                                <h4 data-i18n="phone-title">الهاتف</h4>
-                                <p>01022317002</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="icon">&#128205;</div>
-                            <div class="text">
-                                <h4 data-i18n="location-title">الموقع</h4>
-                                <p data-i18n="location-info">مصر</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
-                        <a href="https://wa.me/201022317002" target="_blank" class="social-link whatsapp-link">&#128172; WhatsApp</a>
-                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
-                    </div>
+                <p class="form-status" id="contactStatus" aria-live="polite"></p>
+                <div class="social-list"><a href="https://github.com/alqhamza35-ctrl" target="_blank" rel="noopener noreferrer" data-i18n="github">GitHub</a><a href="https://wa.me/201022317002" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp">WhatsApp</a></div>
+            </aside>
+            <form class="contact-form" id="contactForm" data-reveal>
+                <h2 data-i18n="contact-form-heading">اكتب رسالتك</h2>
+                <div class="form-grid">
+                    <div class="form-field"><label for="name" data-i18n="form-name">الاسم</label><input id="name" name="name" type="text" required autocomplete="name" data-i18n-placeholder="placeholder-name" placeholder="اكتب اسمك"></div>
+                    <div class="form-field"><label for="email" data-i18n="form-email">البريد الإلكتروني</label><input id="email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="placeholder-email" placeholder="name@example.com"></div>
+                    <div class="form-field full"><label for="subject" data-i18n="form-subject">الموضوع</label><input id="subject" name="subject" type="text" required data-i18n-placeholder="placeholder-subject" placeholder="كيف يمكنني المساعدة؟"></div>
+                    <div class="form-field full"><label for="message" data-i18n="form-message">الرسالة</label><textarea id="message" name="message" required data-i18n-placeholder="placeholder-message" placeholder="اكتب تفاصيل رسالتك هنا"></textarea></div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <button class="button button-primary" type="submit" data-i18n="open-email">فتح تطبيق البريد</button>
+                <p class="form-status" id="formStatus" aria-live="polite"></p>
+            </form>
+        </div></section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Hamza <span>Abdelkhalek</span></a>
-                    <p data-i18n="footer-desc">مهندس برمجيات متخصص في تطوير الويب</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer-quick">روابط سريعة</h4>
-                    <ul>
-                        <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
-                        <li><a href="about.html" data-i18n="about">عني</a></li>
-                        <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
-                        <li><a href="contact.html" data-i18n="contact">التواصل</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4 data-i18n="footer-social">تابعني</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/alqhamza35-ctrl" target="_blank" class="social-link">&#128025; GitHub</a>
-                        <a href="mailto:alqhamza35@gmail.com" class="social-link">&#128231; Email</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">&#8593;</button>
-
-    <script src="i18n.js"></script>
-    <script src="main.js"></script>
-
+    <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html">Hamza <span>Abdelkhalek</span></a><p data-i18n="footer-copy">مهتم بتطوير تجارب ويب مفيدة وواضحة.</p></div><div><h2 class="footer-title" data-i18n="footer-navigation">التنقل</h2><ul class="footer-links"><li><a href="about.html" data-i18n="about">عني</a></li><li><a href="projects.html" data-i18n="projects">المشاريع</a></li><li><a href="certificates.html" data-i18n="certificates">الشهادات</a></li></ul></div><div><h2 class="footer-title" data-i18n="footer-connect">تواصل</h2><ul class="footer-links"><li><a href="mailto:alqhamza35@gmail.com">alqhamza35@gmail.com</a></li><li><a href="https://github.com/alqhamza35-ctrl" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></div></div><p class="footer-bottom">© 2026 Hamza Abdelkhalek. <span data-i18n="footer-rights">جميع الحقوق محفوظة.</span></p></div></footer>
+    <button class="scroll-top" id="scrollTop" type="button" data-i18n-aria="scroll-top">↑</button>
+    <script src="i18n.js"></script><script src="main.js"></script>
 </body>
 </html>
