@@ -60,6 +60,8 @@ const translations = {
     "project8-desc": { "ar": "تطبيق تذكير ذكي", "en": "A smart reminder app" },
     "project9-title": { "ar": "EduFocus Canvas", "en": "EduFocus Canvas" },
     "project9-desc": { "ar": "أداة تعليمية ذكية تجمع بين رفع الملفات، مؤقت بومودورو، ملاحظات لاصقة، ولوحة رسم تفاعلية", "en": "Smart educational tool combining file upload, pomodoro timer, sticky notes, and interactive drawing canvas" },
+    "project10-title": { "ar": "مولد رمز QR", "en": "QR Code Generator" },
+    "project10-desc": { "ar": "أداة سهلة لإنشاء رموز QR مخصصة", "en": "A simple tool for creating custom QR codes" },
     "live-demo": { "ar": "معاينة مباشرة", "en": "Live Demo" },
 
     // Certificates
