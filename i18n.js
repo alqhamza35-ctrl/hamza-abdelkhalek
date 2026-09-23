@@ -82,6 +82,8 @@ const translations = {
     "project9-desc": { ar: "مساحة تعليمية تجمع الملفات والمؤقت والملاحظات ولوحة الرسم.", en: "A learning workspace combining files, a timer, notes, and a drawing canvas." },
     "project10-title": { ar: "مولد رمز QR", en: "QR Code Generator" },
     "project10-desc": { ar: "أداة ويب لإنشاء رموز QR مخصصة بسهولة.", en: "A web tool for creating customized QR codes with ease." },
+    "project11-title": { ar: "تطبيق ملاحظاتي", en: "My Notes App" },
+    "project11-desc": { ar: "أداة بسيطة لإنشاء الملاحظات الشخصية وإدارتها مع خيارات الحفظ والحذف.", en: "A simple tool to create and manage personal notes with save and delete options." },
     "certificates-label": { ar: "التعلّم والاعتمادات", en: "Learning & credentials" },
     "certificates-heading": { ar: "شهادات توثّق مسار التعلّم", en: "Certificates that document my learning path" },
     "certificates-copy": { ar: "شهادات من مبادرات وبرامج تدريبية في البرمجة والذكاء الاصطناعي والحوسبة السحابية والبيانات.", en: "Credentials from learning initiatives and programs in programming, AI, cloud computing, and data." },
