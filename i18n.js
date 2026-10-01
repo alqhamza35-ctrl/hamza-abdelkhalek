@@ -86,6 +86,8 @@ const translations = {
     "project11-desc": { ar: "أداة بسيطة لإنشاء الملاحظات الشخصية وإدارتها مع خيارات الحفظ والحذف.", en: "A simple tool to create and manage personal notes with save and delete options." },
     "project12-title": { ar: "متتبع الصلاة اليومي", en: "Daily Prayer Tracker" },
     "project12-desc": { ar: "يتتبع الصلوات اليومية ويوثّقها عبر الموقع الجغرافي أو الفيديو مع حفظ السجلات وعرض الأوقات.", en: "Tracks daily prayers and verifies them via geolocation or video, logging entries with timestamps and verification details." },
+    "project13-title": { ar: "تطبيق الطقس والساعة الذكي", en: "Smart Weather & Clock" },
+    "project13-desc": { ar: "تطبيق عربي يعرض الطقس الحالي وساعة ديناميكية وبيانات حسب الموقع باستخدام واجهة زجاجية أنيقة.", en: "An Arabic app showing real-time weather, a dynamic clock, and location-based data with an elegant glassmorphism interface." },
     "certificates-label": { ar: "التعلّم والاعتمادات", en: "Learning & credentials" },
     "certificates-heading": { ar: "شهادات توثّق مسار التعلّم", en: "Certificates that document my learning path" },
     "certificates-copy": { ar: "شهادات من مبادرات وبرامج تدريبية في البرمجة والذكاء الاصطناعي والحوسبة السحابية والبيانات.", en: "Credentials from learning initiatives and programs in programming, AI, cloud computing, and data." },
